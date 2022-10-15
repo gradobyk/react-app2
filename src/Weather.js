@@ -3,16 +3,27 @@ import axios from "axios";
 import "./Weather.css"
 
 export default function Weather() {
-	const [ready, setReady] = useState(false);
-	const [temperature, setTemperature] = useState(null);
+	
+	const [weatherData, setWeatherData] = useState({ready: false});
 
 	function handleResponse(response) {
 		console.log(response.data);
-		setTemperature(Math.round(response.data.main.temp));
-		setReady(true);
+		setWeatherData(
+			{
+				ready: true,
+				city: response.data.name,
+				date: "Tuesday 10:00",
+				temperature: Math.round(response.data.main.temp),
+				wind: response.data.wind.speed,
+				humidity: response.data.main.humidity,
+				description: response.data.weather[0].description,
+				icon: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
+
+			
+			})
 	}
 	
-  	if (ready) {
+  	if (weatherData.ready) {
       return (
         
 <div className="Weather shadow">
@@ -37,21 +48,21 @@ export default function Weather() {
     </form>
 			
     <div className="City-Time-Day-Temp">
-              <h1 className="cityName">London</h1>
+              <h1 className="cityName">{weatherData.city}</h1>
               <ul>
-                <li>Last updated: Tuesday 10:00</li>
-                <li>Cloudy</li>
+                <li>Last updated: {weatherData.date}</li>
+                <li className="text-capitalize">{weatherData.description}</li>
               </ul>
     </div>
         <div className="row">
             <div className="col-6">
                 <div className="temperature-parameter ">
                   <img
-                    src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-                    alt="Cloudy"
+                    src= {weatherData.icon}
+                    alt= {weatherData.description}
                     className="float-left fistIcon"
                   />
-                  <strong className="float-left tempAll">{temperature}</strong>
+                  <strong className="float-left tempAll">{weatherData.temperature}</strong>
                   <span className="temp-units">
                     <a href="/" className="">°C</a> | <a href="/">°F</a>
                   </span>
@@ -59,8 +70,8 @@ export default function Weather() {
             </div>
             <div className="col-6 other-units">
                 <ul>
-                  <li>Humidity: 5 %</li>
-                  <li>Wind: 80 km/h</li>
+                  <li>Humidity: {weatherData.humidity}%</li>
+                  <li>Wind: {weatherData.wind} km/h</li>
                 </ul>
             </div>
             </div>
