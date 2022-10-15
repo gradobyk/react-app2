@@ -4,24 +4,17 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-<h1>
-  ПРИВІТ ТУПЕНЬКА
-</h1>
-
+      <h1>Привіт тупенька</h1>
+      <footer>
+        This project was coded by Yuliya Gradobyk and is{" "}
         <a
-          className="App-link"
-          href="https://reactjs.org"
+          href="https://github.com/gradobyk/react-too"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noreferrer"
         >
-          Learn React
+          open-sourced on Github
         </a>
-      </header>
+      </footer>
     </div>
   );
 }
