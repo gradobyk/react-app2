@@ -4,7 +4,7 @@ import './App.css';
 export default function App() {
   return (
     <div className="App">
-      <h1>Привіт тупенька</h1>
+      <h1>Привіт тупенька - Така така </h1>
       <footer>
         This project was coded by Yuliya Gradobyk and is{" "}
         <a
