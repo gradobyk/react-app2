@@ -2,7 +2,7 @@
   --first-color: #e8abeb;
 }
 
-.Weather {
+.App {
   border: 2px solid var(--first-color);
   padding: 15px;
   margin: 20px auto;
