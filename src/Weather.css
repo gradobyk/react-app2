@@ -10,6 +10,11 @@
   max-width: 600px;
 }
 
+.Weather li {
+	list-style: none;
+	margin-left: -20px;
+}
+
 .btn {
   background: var(--first-color);
   border-color: var(--first-color);
