@@ -1,5 +1,8 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
+import WeatherIcon from "./WeatherIcon";
+
+import "./WeatherSearch.css";
 
 
 export default function WeatherSearch(props) {
@@ -16,13 +19,11 @@ export default function WeatherSearch(props) {
       </div>
       <div className="row">
         <div className="col-6">
-          <div className="temperature-parameter ">
-            <img
-              src={props.search.icon}
-              alt={props.search.description}
-              className="float-left fistIcon"
-            />
-            <strong className="float-left tempAll">
+          <div className="">
+            <WeatherIcon code={props.search.icon} size={52} />
+            
+
+            <strong className="tempAll">
               {props.search.temperature}
             </strong>
             <span className="temp-units">
