@@ -1,6 +1,20 @@
 .tempAll {
-  margin-top:  20px;
-  margin-left: 5px;
+  
+  margin-left: 10px;
   font-size: 64px;
   line-height: 64px;
+  position: relative;
+  top: -5px;
+}
+
+.WeatherSearch canvas {
+	margin-top: 5px;
+	margin-left: 10px;
+}
+
+.temp-units {
+	margin-left: 5px;
+	position: relative;
+	top: -35px;
+	color:#e8abeb
 }
