@@ -7,14 +7,15 @@
   top: -5px;
 }
 
-.WeatherSearch canvas {
-	margin-top: 5px;
-	margin-left: 10px;
-}
-
 .temp-units {
 	margin-left: 5px;
 	position: relative;
 	top: -35px;
 	color:#e8abeb
 }
+
+.WeatherSearch canvas {
+	margin-top: 5px;
+	margin-left: 10px;
+}
+
