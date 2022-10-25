@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import WeatherSearch from "./WeatherSearch";
+import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 import "./Weather.css"
 
@@ -39,34 +40,30 @@ export default function Weather(props) {
 	}
   	if (weatherData.ready) {
       return (
-        
-<div className="Weather shadow">
-    <form onSubmit={handleSubmit}
-	className="mb-3 inside">
-        <div className="row">
-            <div className="col-9">
-                  <input
-                    type="search"
-                    placeholder="Type a city you are looking for.."
-                    className="form-control shadow"
-                    autoFocus="on"
-					onChange={handleCityChange}
-                  />
+        <div className="Weather shadow">
+          <form onSubmit={handleSubmit} className="mb-3 inside">
+            <div className="row">
+              <div className="col-9">
+                <input
+                  type="search"
+                  placeholder="Type a city you are looking for.."
+                  className="form-control shadow"
+                  autoFocus="on"
+                  onChange={handleCityChange}
+                />
+              </div>
+              <div className="col-3">
+                <input
+                  type="submit"
+                  value="Search"
+                  className="btn btn-success w-100 buttom1 shadow"
+                />
+              </div>
             </div>
-            <div className="col-3">
-                  <input
-                    type="submit"
-                    value="Search"
-                    className="btn btn-success w-100 buttom1 shadow"
-                  />
-            </div>
+          </form>
+          <WeatherSearch search={weatherData} />
+          <WeatherForecast />
         </div>
-    </form>
-	<WeatherSearch search={weatherData} />
-			
-  
-</div>
-        
       );
     } else {
 
