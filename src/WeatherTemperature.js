@@ -23,11 +23,13 @@ export default function WeatherTemperature(props) {
 	if (unit === "celsius") {
 	return (
     <span>
-      <strong className="tempAll">{props.celsius}</strong>
-      <span className="temp-units">
-          °C
-        {" "}
-        | <a href="/" onClick={showFahrenheit}>°F</a>
+      <strong className="tempAll ">{props.celsius}</strong>
+      
+      <span className="temp-units d-none d-md-block">
+        °C |{" "}
+        <a href="/" onClick={showFahrenheit}>
+          °F
+        </a>
       </span>
     </span>
   );

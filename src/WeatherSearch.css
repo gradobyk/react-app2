@@ -19,21 +19,5 @@
 	margin-left: 10px;
 }
 
-@media (max-width: 576px) {
-  .tempAll {
-	font-size: 36px;
-	position: relative;
-	top: -9px;
-}
-	.temp-units {
-		font-size: 12px;
-	position: relative;
-	top: -25px;
-	color:#e8abeb
-}
 
-	.WeatherSearch canvas {
-	font-size: 28px;
-}
-}
 
