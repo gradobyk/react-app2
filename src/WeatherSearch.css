@@ -19,3 +19,17 @@
 	margin-left: 10px;
 }
 
+@media (max-width: 576px) {
+  .tempAll {
+	font-size: 48px;
+	position: relative;
+	top: -9px;
+}
+	.temp-units {
+	position: relative;
+	top: -30px;
+	color:#e8abeb
+}
+
+}
+
